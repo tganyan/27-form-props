@@ -1,48 +1,46 @@
-![cf](http://i.imgur.com/7v5ASc8.png) 27: Reddit Search Engine
-===
+# Reactive COW
 
-## Submission Instructions
-* Follow the instructions in the "Lab Instructions" documentation in the reference folder of the class repository 
-  
-## Learning Objectives  
-* Students will learn to test react components using jest and enzyme 
-* Students will learn to manage controlled inputs
-* Students will learn to pass data from parent to child through props
+This is an introductory project to react and sass. On click of the 'moo' button, the cow should render some random lorem ipsum.
 
-## Requirements  
- 
-#### Feature Tasks 
-Create the following components and structure them according to the following diagram 
+## Getting Started
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+You must have NodeJS installed along with either NPM or Yarn.
+
+### Installing
+
+Copy the link from the github repository
+In the command line, navigate to the parent directory where you want to store this project
+In the command line, type:
 ```
-App
-  SearchForm
-  SearchResultList
-``` 
-###### App Component
-* should contain all of the **application state** 
-* should contain methods for modifying the application state
-* the state should have a topics array for holding the results of the search
+git clone <repository url>
+```
+Once the project files are there, type:
+```
+npm install
+```
+or
+```
+yarn i
+```
 
-###### SearchForm Component
-* should contain a text input for the user to supply a reddit board to look up
-* should contain a number input for the user to limit the number of results to return 
-  * the number must be more than 0 and less than 100
-  * `onSubmit` the form should make a request to reddit 
-  * it should make a get request to `https://www.reddit.com/r/${searchFormBoard}.json?limit=${searchFormLimit}`
-  * on success it should pass the results to the application state
-  * on failure it should add a class to the form called error and turn the form's inputs borders red
+## Built With
 
-###### SearchResultList Component
-* Should inherit all search results through props
-* This component does not need to have its own state
-* If there are topics in the application state it should display an unordered list 
-* Each list item in the unordered list should contain the following
-  * an anchor tag with a href to the topic.url 
-    * inside the anchor a heading tag with the topic.title 
-    * inside the anchor a p tag with the number of topic.ups 
+* [NodeJS](https://nodejs.org) - The javascript runtime used
+* [Eslint](https://eslint.org/) - Coding style linter
+* [Faker](https://www.npmjs.com/package/faker) - A useful package for generating fake test data
+* [React](https://reactjs.org/) - A dynamic web application framework
+* [Babel](https://babeljs.io/) - A javascript compiler
+* [Webpack](https://webpack.js.org/) - A robust bundling tool
+* [Cowsay](https://www.npmjs.com/package/cowsay) - A fun caw generator
 
-#### Test
-* no testing today
+## Authors
 
-#### Documentation  
-Write a description of the project in your README.md
+* [**Tyler Anyan**](http://tyleranyan.com/)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
