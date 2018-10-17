@@ -10,7 +10,7 @@ class App extends React.Component {
     super(props);
 
     this.state = {};
-    this.state.redditlist = [];
+    this.state.redditList = [];
   }
 
   componentDidMount = async () => {
@@ -40,10 +40,15 @@ class App extends React.Component {
           <ul>
             {
               this.state.redditList.map((currentArticle, index) => {
-                <ResultItem
-                  article = {currentArticle}
-                  key = {index}
-                />
+                console.log(currentArticle);
+                if (currentArticle) {
+                  return <ResultItem
+                      article = {currentArticle}
+                      key = {index}
+                  />
+                } else {
+                  <h5>The search term you entered does not exist</h5>
+                }
               })
             }
           </ul>

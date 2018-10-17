@@ -6,9 +6,13 @@ class RedditItem extends React.Component {
 
   render() {
     return (
-        <li>
-          <a src={`https://www.reddit.com${this.props.redditList.data.permalink}`}>{this.props.redditList.data.title}</a>
+        <li key={this.props.key}>
+          <a src={`https://www.reddit.com${this.props.article.data.permalink}`}>{this.props.article.data.title}</a>
+          {
+            console.log(this.props.article.data.permalink)
+          }
         </li>
+
     );
   }
 }
