@@ -1,12 +1,12 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 class SearchForm extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {};
-    this.state.searchTerm = this.props.title || '';
+    this.state.searchTerm = this.props.title || 'cats';
     this.state.searchLimit = this.props.searchLimit || 10;
   }
 
@@ -42,6 +42,12 @@ class SearchForm extends React.Component {
         </form>
     );
   }
+}
+
+SearchForm.propTypes = {
+  handleUserInput: PropTypes.func,
+  searchTerm: PropTypes.string,
+  searchLimit: PropTypes.number,
 }
 
 export default SearchForm;
