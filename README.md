@@ -1,6 +1,6 @@
-# Reactive COW
+# React Search
 
-This is an introductory project to react and sass. On click of the 'moo' button, the cow should render some random lorem ipsum.
+This is a simple react app for someone to search the reddit api.
 
 ## Getting Started
 
@@ -36,6 +36,8 @@ yarn i
 * [Babel](https://babeljs.io/) - A javascript compiler
 * [Webpack](https://webpack.js.org/) - A robust bundling tool
 * [Cowsay](https://www.npmjs.com/package/cowsay) - A fun caw generator
+* [Superagent](https://visionmedia.github.io/superagent/) - AJAX with less suck!
+
 
 ## Authors
 
