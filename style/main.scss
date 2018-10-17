@@ -1,10 +1,53 @@
+$color-primary: #000000;
+$color-secondary: #ffffff;
+$color-accent: #6b6b6b;
+
+header {
+  text-align: center;
+  font-family: sans-serif;
+}
+
 form {
+  width: 50%;
+  margin: 0 auto 2em;
   & input {
     display: block;
+    width: 100%;
   }
 }
 
 button {
   display: block;
   margin-top: 2em;
+  width: 100%;
+  border: none;
+  background-color: $color-primary;
+  color: $color-secondary;
+  padding: 1em;
+  &:hover {
+    background-color: $color-accent;
+    cursor: pointer;
+  }
+}
+
+ul {
+  width: 50%;
+  margin: 0 auto;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: .75em;
+  padding-bottom: .5em;
+  border-bottom: solid 1px $color-primary;
+  list-style: none;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    color: $color-accent;
+  }
 }

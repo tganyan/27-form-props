@@ -13,18 +13,12 @@ class App extends React.Component {
     this.state.redditList = [];
   }
 
-  componentDidMount = async () => {
-    await this.handleUserInput()
-    console.log('reddit list loaded');
-  }
-
   handleUserInput = async (searchTerm, searchLimit) => {
     const REDDIT_API = `https://www.reddit.com/r/${searchTerm}.json?limit=${searchLimit}`;
     return superagent.get(REDDIT_API)
         .then(response => {
           if (response.body.data) {
             this.setState({redditList: response.body.data.children});
-            console.log(this.state.redditList);
           }
         })
         .catch(console.error)
@@ -40,7 +34,6 @@ class App extends React.Component {
           <ul>
             {
               this.state.redditList.map((currentArticle, index) => {
-                console.log(currentArticle);
                 if (currentArticle) {
                   return <ResultItem
                       article = {currentArticle}
